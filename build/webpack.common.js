@@ -24,7 +24,7 @@ module.exports = {
       {
         test: /\.(s*)css$/, // 正则匹配文件路径
         exclude: /node_modules/,
-        use: ["css-loader", "style-loader"]
+        use: ["style-loader", "css-loader"]
       }
     ]
   },
