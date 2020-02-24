@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function useStateFn() {
+export function UseStateFn() {
   const [times, setTimes] = useState(110);  // 定时器state, 默认值为110
   const [name, resetNames] = useState('xiaobe');
   const [todos, setTodos] = useState([{ text: '学习 hook' }]);

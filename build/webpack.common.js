@@ -7,36 +7,48 @@ module.exports = {
   entry: path.join(__dirname, "../src/main.tsx"),
   output: {
     filename: "bundle.js",
-    path: path.join(__dirname, "dist")
+    path: path.join(__dirname, "dist"),
   },
   module: {
     rules: [
       {
         test: /\.js$/,
         use: ["babel-loader"],
-        include: path.join(__dirname, "src")
+        include: path.join(__dirname, "src"),
+      },
+      {
+        test: /\.jsx?$/,
+        loader: "babel-loader",
       },
       {
         test: /\.tsx?$/,
         exclude: /node_modules/,
-        use: ["ts-loader"]
+        use: ["ts-loader"],
       },
       {
         test: /\.(s*)css$/, // 正则匹配文件路径
         exclude: /node_modules/,
-        use: ["style-loader", "css-loader"]
-      }
-    ]
+        use: ["style-loader", "css-loader"],
+      },
+      {
+        test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
+        use: "file-loader",
+      },
+      {
+        test: /\.mp4$/,
+        use: "file-loader?name=videos/[name].[ext]",
+      },
+    ],
   },
   resolve: {
-    extensions: [".ts", ".tsx", ".js", ".jsx", ".css", ".scss"]
+    extensions: [".ts", ".tsx", ".js", ".jsx", ".css", ".scss"],
   },
   plugins: [
     new HtmlWebpackPlugin({
       filename: "index.html",
       template: "public/index.html",
-      inject: true
-    })
+      inject: true,
+    }),
   ],
   devServer: {
     host: "localhost",
@@ -44,9 +56,9 @@ module.exports = {
     contentBase: path.join(__dirname, "../dist"),
     // historyApiFallback: true,
     overlay: {
-      errors: true
+      errors: true,
     },
     inline: true,
-    hot: true
-  }
+    hot: true,
+  },
 };

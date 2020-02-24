@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-export default function UseEffectFn() {
+export function UseEffectFn() {
   const [count, setCount] = useState(0);
 
   // Similar to componentDidMount and componentDidUpdate:
