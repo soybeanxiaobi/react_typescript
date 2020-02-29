@@ -1,4 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
+import { Grid } from 'zent';
+import './index.scss';
 
 // Usage
 export function UseAsyncFn() {
@@ -6,11 +8,17 @@ export function UseAsyncFn() {
 
   return (
     <div>
-      {value && <div>{value}</div>}
-      {error && <div>{error}</div>}
-      <button onClick={execute} disabled={pending}>
-        {!pending ? 'Click me' : 'Loading...'}
-      </button>
+      <div className="columns">
+        {value && <div>{value}</div>}
+        {error && <div>{error}</div>}
+        <button onClick={execute} disabled={pending}>
+          {!pending ? 'Click me' : 'Loading...'}
+        </button>
+      </div>
+      <div className="columns">
+        <button>获取列表数据</button>
+        <Grid datasets={[]} columns={[]} />
+      </div>
     </div>
   );
 }

@@ -1,0 +1,7 @@
+.use-key-press-wrap {
+  span + span {
+    &::before {
+      content: "+";
+    }
+  }
+}

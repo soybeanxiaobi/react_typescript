@@ -5,15 +5,15 @@ import "./index.scss";
 const EMUN_LINK = [
   {
     text: "useState",
-    url: "/use-state",
+    url: "use-state",
   },
   {
     text: "useEffect",
-    url: "/use-effect",
+    url: "use-effect",
   },
   {
     text: "useAsync",
-    url: "/use-async",
+    url: "use-async",
   },
 ];
 class Header extends PureComponent {

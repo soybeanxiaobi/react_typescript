@@ -1,0 +1,66 @@
+Arguments: 
+  /Users/chenxiaobin/.nvm/versions/node/v10.16.3/bin/node /usr/local/Cellar/yarn/1.10.1/libexec/bin/yarn.js add react-router-dom -d
+
+PATH: 
+  /Users/chenxiaobin/.nvm/versions/node/v10.16.3/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+
+Yarn version: 
+  1.10.1
+
+Node version: 
+  10.16.3
+
+Platform: 
+  darwin x64
+
+Trace: 
+  SyntaxError: /Users/chenxiaobin/Youzan/code/xiaobe/hooks-ts/package.json: Unexpected token } in JSON at position 1048
+      at JSON.parse (<anonymous>)
+      at /usr/local/Cellar/yarn/1.10.1/libexec/lib/cli.js:1136:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/Cellar/yarn/1.10.1/libexec/lib/cli.js:98:30)
+      at /usr/local/Cellar/yarn/1.10.1/libexec/lib/cli.js:109:13
+
+npm manifest: 
+  {
+    "name": "20190624_Typescript_Study",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "scripts": {
+      "dev": "webpack-dev-server --inline --config build/webpack.common.js --mode development",
+      "build": "webpack --config build/webpack.common.js --mode production"
+    },
+    "devDependencies": {
+      "@babel/core": "^7.4.5",
+      "@babel/plugin-proposal-class-properties": "^7.8.3",
+      "@babel/preset-env": "^7.4.5",
+      "@babel/preset-react": "^7.0.0",
+      "@types/react": "^16.8.22",
+      "@types/react-dom": "^16.8.4",
+      "@types/webpack-env": "^1.13.9",
+      "babel-loader": "^8.0.6",
+      "css-loader": "^3.0.0",
+      "file-loader": "^4.2.0",
+      "html-webpack-plugin": "^3.2.0",
+      "react-router": "^5.0.1",
+      "style-loader": "^0.23.1",
+      "ts-loader": "^6.0.4",
+      "typescript": "^3.5.2",
+      "webpack": "^4.35.0",
+      "webpack-cli": "^3.3.5",
+      "webpack-dev-server": "^3.7.2",
+      "zent": "^8.2.0"
+    },
+    "dependencies": {
+      "@types/react-router": "^5.0.2",
+      "react": "^16.12.0",
+      "react-dom": "^16.12.0",
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
