@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
-
-export function UseDebounce() {
+interface IProps {
+  useDispatch: (action: string) => void;
+}
+export default function UseDebounce(props: IProps) {
   const [searchVal, setSearchVal] = useState('');
   const [loading, setLoading] = useState(false);
   const debouncedSearchVal = useDebounce(searchVal, 500);

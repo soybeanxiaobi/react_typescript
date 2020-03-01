@@ -1,9 +1,11 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Grid } from 'zent';
 import './index.scss';
-
+interface IProps {
+  useDispatch: (action: string) => void;
+}
 // Usage
-export function UseAsyncFn() {
+export default function UseAsyncFn(props: IProps) {
   const { execute, pending, value, error } = useAsync(myFunction, false);
 
   return (

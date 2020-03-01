@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 interface IProps {
-  useDispatch: (logText: string) => void;
+  useDispatch: (action: string) => void;
 }
 interface IDispatchParams {
   type: string;

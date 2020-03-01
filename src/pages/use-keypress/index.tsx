@@ -1,12 +1,11 @@
 import React, { useEffect, useState, useMemo } from 'react';
-// import { keyText } from './constants';
-import './index.scss';
-
-export const UseKeyPressFn = () => {
+interface IProps {
+  useDispatch: (action: string) => void;
+}
+export default (props: IProps) => {
   const isC = useKeyPress('c');
   const isA = useKeyPress('a');
   const demo = useMemo(() => {
-    console.log('demo memo');
     if (isC && isA) {
       return 'press c+a'
     } else if (isC) {
@@ -19,6 +18,7 @@ export const UseKeyPressFn = () => {
   }, [isC, isA])
   return (
     <>
+      {!isA && <span style={{color: '#eee'}}>按住A试试?</span>}
       {demo}
     </>
   )
