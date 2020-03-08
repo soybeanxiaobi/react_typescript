@@ -11,7 +11,7 @@ export default (props: IProps) => {
     } else if (isC) {
       return 'press c'
     } else if (isA) {
-      return 'press a'
+      return 'press a'  
     } else {
       return 'no press'
     }

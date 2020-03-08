@@ -6,3 +6,4 @@ export const useTextArrDispatch = (initVal: string[] = []) => {
   }, [initVal]);
   return [data, dispatch];
 }
+
